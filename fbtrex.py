@@ -5,9 +5,6 @@ import matplotlib.pyplot as plt
 import matplotlib.dates
 from io import BytesIO
 
-
-
-
 def GetData(hours):
     data = requests.get("https://facebook.tracking.exposed/api/v1/stats/basic/1").json()
 
@@ -24,8 +21,6 @@ def GetData(hours):
         visits, timelines, newsupporters, htmls, impressions)
 
     return msg
-
-
 
 
 def GetGraph(what, when):

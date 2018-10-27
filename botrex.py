@@ -3,7 +3,6 @@ import logging
 import json
 import fbtrex
 
-
 # LOAD CONFIGURATION
 #must be a json file containing two values: token and chat_id
 
