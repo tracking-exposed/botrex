@@ -5,5 +5,7 @@ cache = TTLCache(maxsize=1, ttl=600) # maxsize is 1 because we only fetch one el
 
 @cached(cache)
 def getBasic():
-    data = requests.get("https://facebook.tracking.exposed/api/v1/stats/basic/1").json()
+    url = "https://facebook.tracking.exposed/api/v1/stats/basic/1"
+    print("Accessing", url)
+    data = requests.get(url).json()
     return data

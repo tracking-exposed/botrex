@@ -6,7 +6,7 @@ import fbtrex
 # LOAD CONFIGURATION
 #must be a json file containing two values: token and chat_id
 
-with open('config.json', 'r') as f:
+with open('config/config.json', 'r') as f:
     config = json.load(f)
 
 # initialize telegram bot
