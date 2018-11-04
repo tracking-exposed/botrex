@@ -4,9 +4,9 @@ Telegram Bot for tracking.exposed
 a python3 software
 
 
-### Install **venv** and **git** first
+### Install system requiremens (Debian/Ubuntu)
 
-    sudo apt-get install git python3-venv
+    sudo apt-get install git python3-venv python3-dev
     
 ### Clone bottrex with git and move to that folder:
 
@@ -26,17 +26,17 @@ a python3 software
     
 ### Edit your configuration file
 
-    nano config.json 
-
-and paste this:
+has this format:
 
     {
-    "token": "",
-    "channel_id": ""
+        "token": "",
+        "channel_id": ""
     }
 
-> To create a bot and get a **token**, just talk to the **BotFather**: https://telegram.me/botfather. Channel ID is the ID of your channel, can be '@channel'.
+To create a bot and get a **token**, just talk to the **BotFather**: https://telegram.me/botfather. Channel ID is the ID of your channel, can be '@channel'.
 
 ## Run the script:
 
     python3 botrex.py
+
+
