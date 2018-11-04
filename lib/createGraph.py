@@ -43,10 +43,12 @@ def createGraph(what, data, when):
         formatter: <String>
         start: <Int>
     """
-    print("createGraph: %s (%d object) %j", what, data.length(), when)
+    print("createGraph: %s (%d object) %j", what,
+          # data.length(),
+          when)
 
     # determine when in correct format and select data
-    data = data[when.start:-1]
+    data = data[when['start']:-1]
 
     # create pandas dataframe
     df = pd.DataFrame(data)
@@ -58,7 +60,7 @@ def createGraph(what, data, when):
     del df['start'] # it's useless now
 
     # aggregate all data to daily stats
-    df.index = df.index.floor(when.floor)
+    df.index = df.index.floor(when['floor'])
     df = df.groupby(df.index).sum()
 
     # PLOT IT
@@ -70,10 +72,10 @@ def createGraph(what, data, when):
 
     # Set major x ticks on Mondays.
     ax.xaxis.set_major_locator(
-        matplotlib.dates.DayLocator(interval=when.interval)
+        matplotlib.dates.DayLocator(interval=when['interval'])
     )
     ax.xaxis.set_major_formatter(
-        matplotlib.dates.DateFormatter(when.formatter)
+        matplotlib.dates.DateFormatter(when['formatter'])
     )
 
     # save in buffer as png and return it
