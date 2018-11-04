@@ -2,3 +2,4 @@ requests==2.18.4
 pandas
 matplotlib
 python-telegram-bot
+cachetools==2.1.0
