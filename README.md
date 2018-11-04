@@ -6,7 +6,7 @@ a python3 software
 
 ### Install system requiremens (Debian/Ubuntu)
 
-    sudo apt-get install git python3-venv python3-dev
+    sudo apt-get install git python3-venv python3-dev python3-tk
     
 ### Clone bottrex with git and move to that folder:
 
