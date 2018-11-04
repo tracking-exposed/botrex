@@ -4,7 +4,7 @@ Telegram Bot for tracking.exposed
 a python3 software
 
 
-### Install system requiremens (Debian/Ubuntu)
+### Install system requirements (Debian/Ubuntu)
 
     sudo apt-get install git python3-venv python3-dev python3-tk
     
