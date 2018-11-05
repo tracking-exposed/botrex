@@ -42,9 +42,7 @@ def createGraph(what, data, when):
         formatter: <String>
         start: <Int>
     """
-    print("createGraph: %s (%d object) %j", what,
-          # data.length(),
-          when)
+    print("createGraph: {}, {}".format(what, when['granularity']))
 
     # determine when in correct format and select data
     data = data[when['start']:-1]
