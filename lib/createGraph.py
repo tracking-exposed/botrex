@@ -1,4 +1,3 @@
-import json
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.dates
@@ -55,7 +54,7 @@ def createGraph(what, data, when):
     # make it lighter straight away
     df = df[[what, 'start']]
 
-    #format index as date (day)
+    # format index as date (day)
     df = df.set_index(pd.DatetimeIndex(pd.to_datetime(df['start'], format='%Y-%m-%d %H:%M:%S')))
     del df['start'] # it's useless now
 
@@ -63,17 +62,20 @@ def createGraph(what, data, when):
     df.index = df.index.floor(when['floor'])
     df = df.groupby(df.index).sum()
 
-    # PLOT IT
+    # plot it
     f, ax = plt.subplots(1, figsize=(10, 5))
     x = df.index
     ax.plot(x, df[what])
     ax.set_title(what)
     ax.grid(True)
 
-    # Set major x ticks on Mondays.
-    ax.xaxis.set_major_locator(
-        matplotlib.dates.DayLocator(interval=when['interval'])
-    )
+    # set x ticks correctly
+
+    if when['floor'] == 'H':
+        ax.xaxis.set_major_locator(matplotlib.dates.HourLocator(interval=when['interval']))
+    else:
+        ax.xaxis.set_major_locator(matplotlib.dates.DayLocator(interval=when['interval']))
+
     ax.xaxis.set_major_formatter(
         matplotlib.dates.DateFormatter(when['formatter'])
     )
