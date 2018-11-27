@@ -7,17 +7,17 @@ from fetchData import getBasic
 
 from telegram.ext import Updater, CommandHandler
 import logging
-import json
+import configargparse
 
 
 # load configuration
-config_path = str(Path(os.path.join(os.path.dirname(os.path.dirname(__file__)))))+'/config/config.json'
-
-with open(config_path, 'r') as f:
-    config = json.load(f)
+p = configargparse.ArgParser(default_config_files=[os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), "config/general.conf"))])
+p.add('-c', '--my-config', is_config_file=True, help='config file path')
+p.add('-b', '--token', help='bot token', required=True)
+args = p.parse_args()
 
 # initialize telegram bot
-updater = Updater(token=config['token'])
+updater = Updater(token=args.token)
 dispatcher = updater.dispatcher
 
 # logging and error handling
