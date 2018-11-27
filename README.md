@@ -24,11 +24,14 @@ a python3 software
 
     python3 -m pip install -r requirements.txt
     
-### Edit your configuration file
+### Edit your configuration files
 
-has this format (see example in config/):
+they have this format (see example in config/):
 
     --token abc123:abc123123
+    
+    --timeframe 24
+    --channel_id (@channel_id or -1001231231231)
 
 
 To create a bot and get a **token**, just talk to the **BotFather**: https://telegram.me/botfather. Channel ID is the ID of your channel, can be '@channel'.
