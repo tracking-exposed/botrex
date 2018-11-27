@@ -3,3 +3,4 @@ pandas
 matplotlib
 python-telegram-bot
 cachetools==2.1.0
+ConfigArgParse==0.13.0
