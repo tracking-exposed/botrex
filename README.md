@@ -26,12 +26,10 @@ a python3 software
     
 ### Edit your configuration file
 
-has this format:
+has this format (see example in config/):
 
-    {
-        "token": "",
-        "channel_id": ""
-    }
+    --token abc123:abc123123
+
 
 To create a bot and get a **token**, just talk to the **BotFather**: https://telegram.me/botfather. Channel ID is the ID of your channel, can be '@channel'.
 
