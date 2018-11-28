@@ -28,10 +28,12 @@ a python3 software
 
 they have this format (see example in config/):
 
-    --token abc123:abc123123
+    # for config/general.conf
+    --token abc123:abc123123 # See below on how to obtain a token throught the BotFather
     
-    --timeframe 24
-    --channel_id (@channel_id or -1001231231231)
+    # for config/channelupdate.conf
+    --timeframe 24 # integer of number of hours to get the stats for
+    --channel_id (@channel_name or -1001231231231) # Name of the channel or ID (in case it is private), could be obtained by using      Telegram Plus or cli.
 
 
 To create a bot and get a **token**, just talk to the **BotFather**: https://telegram.me/botfather. Channel ID is the ID of your channel, can be '@channel'.
