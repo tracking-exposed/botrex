@@ -38,14 +38,14 @@ they have this format (see example in config/):
 
 To create a bot and get a **token**, just talk to the **BotFather**: https://telegram.me/botfather. Channel ID is the ID of your channel, can be '@channel'.
 
-## to run the chatbot in a group or in private chat:
+## To run the chatbot in a group or in private chat:
 
     python3 test/tester.py
 
 Then, in the private chat or group write /help for a list of commands.
 
 
-## to run the updates bot in a channel:
+## To run the updates bot in a channel:
 
     python3 bin/channel_update.py
     
