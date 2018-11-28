@@ -33,7 +33,7 @@ they have this format (see example in config/):
     
     # for config/channelupdate.conf
     --timeframe 24 # integer of number of hours to get the stats for
-    --channel_id (@channel_name or -1001231231231) # Name of the channel or ID (in case it is private), could be obtained by using      Telegram Plus or cli.
+    --channel_id (@channel_name or -1001231231231) # Name of the channel or ID (in case it is private), could be obtained by using Telegram Plus or cli.
 
 
 To create a bot and get a **token**, just talk to the **BotFather**: https://telegram.me/botfather. Channel ID is the ID of your channel, can be '@channel'.
